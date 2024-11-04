@@ -10,23 +10,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Cadastro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="box">
     <h2>CADASTRO DE USUÁRIO</h2><br>
-    <form action="" method="post">
-        <label>Nome:</label><br>
-        <input type="text" name="nome" id="" placeholder = "Nome Completo."><br>
-        <label>Email:</label><br>
-        <input type="email" name="email" id="" placeholder = "Digite o email."><br>
-        <label>Telefone:</label><br>
-        <input type="tel" name="telefone" id="" placeholder = "Telefone completo."><br>
-        <label>Senha:</label><br>
-        <input type="password" name="senha" id="" placeholder = "Digite sua senha."><br>
-        <label>Confirmar Senha:</label><br>
-        <input type="password" name="confSenha" id="" placeholder = "Confirme sua senha."><br><br>
-
-        <input type="submit" value="CADASTRAR">
-    </form>
+        <form action="" method="post">
+            <label id="formLabel">Nome:</label><br>
+            <input type="text" name="nome" id="formCaixa" placeholder = "Nome Completo."><br>
+            <label id="formLabel">Email:</label><br>
+            <input type="email" name="email" id="formCaixa" placeholder = "Digite o email."><br>
+            <label id="formLabel">Telefone:</label><br>
+            <input type="tel" name="telefone" id="formCaixa" placeholder = "Telefone completo."><br>
+            <label id="formLabel">Senha:</label><br>
+            <input type="password" name="senha" id="formCaixa" placeholder = "Digite sua senha."><br>
+            <label id="formLabel">Confirmar Senha:</label><br>
+            <input type="password" name="confSenha" id="formCaixa" placeholder = "Confirme sua senha."><br><br>
+            
+            <input type="submit" value="CADASTRAR" id="botao">
+        </form>
+    </div>
 
     <?php
     if(isset($_POST['nome']))
@@ -49,17 +52,46 @@
                         ?>
                             <!-- bloco de html -->
                             <div class="msg-sucesso">
-                                <p>cadastrado com sucesso!</p>
+                                <p>Cadastrado com sucesso!</p>
                                 <p>Clique <a href="login.php">aqui</a> para logar</p>
                             </div>
                         <?php
                     }
+                    else
+                    {
+                        ?>
+                            <div class="msg-erro-email">
+                                <p>O email inserido já está cadastrado.</p>
+                                <p>Tente novamente utilizando outro email.</p>
+                            </div>
+                        <?php
+                    }
+                }
+                else
+                {
+                    ?>
+                        <div class="msg-erro-senha">
+                            <p>As senhas digitadas são diferentes...</p>
+                        </div>
+                    <?php
                 }
             }
             else
             {
-                echo "fudeu (tente outra vez)".$usuario->msgErro;
+                ?>
+                    <div class="msg-erro">
+                        <?php echo "Erro: ".$usuario->msgErro;?>
+                    </div>
+                <?php
             }
+        }
+        else
+        {
+            ?>
+            <div class="msg-erro-campos">
+                <p>Preencha todos os campos corretamente.</p>
+            </div>
+            <?php
         }
     }
     ?>
