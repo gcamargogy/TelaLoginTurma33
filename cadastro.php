@@ -10,25 +10,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
-    <div class="box">
-    <h2>CADASTRO DE USUÁRIO</h2><br>
-        <form action="" method="post">
-            <label id="formLabel">Nome:</label><br>
-            <input type="text" name="nome" id="formCaixa" placeholder = "Nome Completo."><br>
-            <label id="formLabel">Email:</label><br>
-            <input type="email" name="email" id="formCaixa" placeholder = "Digite o email."><br>
-            <label id="formLabel">Telefone:</label><br>
-            <input type="tel" name="telefone" id="formCaixa" placeholder = "Telefone completo."><br>
-            <label id="formLabel">Senha:</label><br>
-            <input type="password" name="senha" id="formCaixa" placeholder = "Digite sua senha."><br>
-            <label id="formLabel">Confirmar Senha:</label><br>
-            <input type="password" name="confSenha" id="formCaixa" placeholder = "Confirme sua senha."><br><br>
-            
-            <input type="submit" value="CADASTRAR" id="botao">
-        </form>
+
+    <div class="cadastro-container">
+        <div class="cadastro-image">
+            <img src="img/cadastro.svg" alt="">
+        </div>
+
+        <div class="cadastro-section">
+            <h1>Olá, seja bem-vindo!</h1>
+            <h2>Preencha os campos abaixos para cadastrar sua conta.</h2>
+            <form method="post" class="form-box">
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome" class="nome" placeholder="Informe seu nome" required>
+
+                <label>E-mail</label>
+                <input type="email" name="email" id="email" class="email" placeholder="Digite seu email" required>
+
+                <label>Telefone</label>
+                <input type="text" name="telefone" id="telefone" class="telefone" placeholder="Digite seu número de telefone "required>
+
+                <label>Senha</label>
+                <input type="password" name="senha" id="senha" class="senha" placeholder="Digite uma senha senha" required>
+
+                <label>Confirme sua senha</label>
+                <input type="password" name="confSenha" id="confSenha" class="confSenha" placeholder="Confirme sua senha" required>
+
+                <button class="btnCadastrar">Cadastrar</button>
+                <p class="infos"><a href="login.php" class="login">Acessar minha conta</a></p>
+            </form>
+        </div>
     </div>
 
     <?php

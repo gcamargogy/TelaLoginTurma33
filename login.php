@@ -10,19 +10,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <h2>TELA LOGIN</h2><br><br>
-    <form method="POST">
-        <label>Usuário:</label><br>
-        <input type="email" name="email" id="" placeholder = "Digite seu email."><br><br>
-        <label>Senha:</label><br>
-        <input type="password" name="senha" id="" placeholder = "Digite sua senha."><br><br>
+    <div class="login-container">
+        <div class="login-image">
+            <img src="img/login.svg" alt="">
+        </div>
 
-        <input type="submit" value="LOGAR"><br>
-        <a href="cadastro.php">INSCREVA-SE</a>
-    </form>
+        <div class="login-section">
+            <h1>Bem-vindo de volta!</h1>
+            <h2>Preencha os campos abaixos para acessar sua conta.</h2>
+            <form method="POST" class="form-box">
+                <label>E-mail</label>
+                <input type="email" name="email" id="email" class="email" placeholder="Digite seu email" required>
+
+                <label>Senha</label>
+                <input type="password" name="senha" id="senha" class="senha" placeholder="Digite sua senha" required>
+
+                <button class="btnEntrar">Entrar</button>
+                <p class="infos"><a href="recuperarSenha.html" class="recuperarSenha">Esqueci minha senha</a> ⎯⎯⎯⎯ <a href="cadastro.php" class="cadastro">Cadastre uma conta</a></p>
+             </form>
+        </div>
+    </div>
 
     <?php
         if(isset($_POST['email']))

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    table-layout: fixed;
+}
+
+.table-header {
+    background-color: #ff8800;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-row {
+    text-align: center;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-cell {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.empty-message {
+    text-align: center;
+    color: #666;
+}
+
+.btn-editar, .btn-excluir {
+    padding: 10px 70px;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-editar {
+    background-color: #ffa500;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #e68900;
+}
+
+.btn-excluir {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background-color: #e60000;
+}
+
+.btn-salvar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.btn-salvar:hover {
+    background-color: #45a049;
+}
+
+.btn-cancelar {
+    background-color: #a1a1a1;
+    color: white;
+    padding: 15px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    /* margin-left: 5%; */
+}
+
+.btn-cancelar:hover {
+    background-color: #999;
+}
+
+.edit-form {
+    display: none;
+    background-color: #1d1d1d;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 1400px;
+    margin: 10px auto;
+}
+
+.edit-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.input-edit {
+    width: 98%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.input-edit:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .body {
+        background-color: white;
+    }
+
+    .container {
+        width: 100%;
+        box-shadow: 0 0 0 0;
+        margin-right: 20px;
+    }
+
+    .table-cell {
+        border: none;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .btn-excluir {
+        font-size: 12px;
+        padding: 20% 13% ;
+        width: auto;
+        margin: 5px -9px;
+    }
+
+    .btn-editar {
+        font-size: 12px;
+        padding: 20% 15% ;
+        width: auto;
+        margin: 5px -7px;
+    }
+
+    .btn-salvar {
+        width: 100%;
+        margin-bottom: 3%;
+        padding: 12px 12px;
+    }
+
+    .btn-cancelar {
+        width: 100%;
+        padding: 12px 12px;
+    }
+
+    .table-header {
+        font-size: 10px;
+        text-align: center;
+    }
+
+}
